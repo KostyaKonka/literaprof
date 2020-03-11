@@ -1,0 +1,60 @@
+;;
+jQuery(document).ready(function($){
+	function rhctt_cb_event_render_begin( e, calendar,for_widget,event,element,view,fc_options ){
+		
+		var rhc_holder = $(calendar).parents('.rhc_holder');
+		var tt_tpl = rhc_holder.find('.rhctt-template.fc-tpl-view-' + view.name.toLowerCase() );
+
+		if( tt_tpl.length > 0 ){
+			el = $( tt_tpl.html() );
+			//fill existing
+			el.find( '.fc-event-time' ).html( $(element).find('.fc-event-time').html() );
+			el.find( '.fc-event-title' ).html( $(element).find('.fc-event-title').html() );
+			
+			el.find( '.fc-event-time' ).each(function(i,el_time){			
+				if( time_format = $(el_time).data('date_format') ){
+					$(el_time).html( $.fullCalendar.formatDates( event.start, event.end, time_format ) );	
+				}		
+			});
+			
+			if( el.find( '.fc-event-start' ).length > 0 ){
+				el_start = el.find( '.fc-event-start' );
+				if( event.start ){
+					_format = el_start.data('format');
+					el.find( '.fc-event-start' ).html(  );
+				}else{
+					el.find( '.fc-event-start' ).hide();
+				}			
+			}
+				
+			//fill new
+			
+			var terms = el.find( '.fc-term' );
+			terms.hide();
+			
+			if( event.terms && event.terms.length > 0 ){
+				$.each( event.terms, function(i,t){
+
+					terms.each( function( j, term ){
+						if( t.taxonomy == $(term).data('taxonomy') ){
+							$(term)
+								.html( t.name )
+								.show()
+							;
+						}
+					});
+				});
+			}
+	
+			//replace
+			element.find('.fc-event-inner').replaceWith(el);
+		}
+		
+	}
+	
+	$('body').bind('cb_event_render_begin', function(e, calendar,for_widget,event,element,view,fc_options){
+
+		
+		rhctt_cb_event_render_begin( e, calendar,for_widget,event,element,view,fc_options );
+	});
+});

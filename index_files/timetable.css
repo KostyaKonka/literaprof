@@ -1,0 +1,207 @@
+.rhcalendar.rhc-timetable .fullCalendar .btn-group .btn.dropdown-toggle.clearfix.btn-small.btn-taxfilter {
+    min-width: 160px;
+}
+
+.rhc-timetable .fc-agenda-slots {
+    border-collapse: collapse;
+}
+
+.rhc-timetable table.fc-agenda-days.fc-border-separate {
+    background-color: #f9f9f9;
+}
+
+
+.rhc-timetable .fc-agenda-slots tr {
+    border:none;
+}
+
+
+.rhc-timetable .fc-agenda-slots tbody tr th {
+    border:none;
+}
+
+.rhc-timetable .fc-agenda-slots tbody tr .fc-widget-content, .rhc-timetable .fc-view-agendaWeek .fc-widget-content {
+    border-top: none;
+    border-bottom: none;
+	height: 30px;
+	padding: 1px 0;
+}
+
+.rhc-timetable .fc-agenda .fc-border-separate .fc-widget-content {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+	padding:1px 0;
+}
+
+.rhc-timetable .fullCalendar td.fc-day {
+    padding: 0;
+}
+
+.rhc-timetable .fc-agenda-slots tbody tr:nth-child(4n+1) td,
+.rhc-timetable .fc-agenda-slots tbody tr:nth-child(4n+2) td,
+.rhcalendar.rhc-timetable .fc-agenda tr:nth-child(4n+1) .fc-widget-header,
+.rhcalendar.rhc-timetable .fc-agenda tr:nth-child(4n+2) .fc-widget-header {
+    background-color: rgba(128, 128, 128, 0.08);
+}
+
+.rhc-timetable .fc-agenda-days thead tr th {
+    border: 2px solid #fff;
+	border-bottom: 4px solid #fff;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+}
+
+.rhcalendar.rhc-timetable .fc-agenda table thead:first-child tr.fc-first:first-child .fc-widget-header.fc-agenda-axis {
+    border-bottom: 4px solid #fff;
+    border-right: 1px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.rhc-timetable .fc-agenda .fc-agenda-allday tbody tr th {
+    border: 2px solid #fff;
+ }
+
+.rhc-timetable .fc-agenda .fc-border-separate .fc-widget-content div {
+    padding: 0;
+}
+
+.rhc-timetable .fullCalendar td.fc-day .fc-day-content {
+    padding: 0;
+}
+
+.rhcalendar.rhc-timetable .fc-agenda .fc-widget-header.fc-agenda-axis {
+	background-color: #f9f9f9;
+	border: none;
+	border-left: 2px solid #f2f2f2;
+	border-right: 2px solid #f2f2f2;
+	padding: 0 5px;
+}
+
+.rhc-timetable .fc-agenda-divider.fc-widget-header {
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.rhc-timetable .fc-agenda-divider.fc-widget-header .fc-agenda-divider-inner {
+    background-color: transparent;
+}
+
+.rhc-timetable .fullCalendar a.fc-event {
+    border-radius: 0;
+}
+
+.rhc-timetable .fullCalendar  a.fc-event {
+    text-align: center;
+    padding: 0;
+    border: none;
+	margin: 0;
+}
+
+.rhc-timetable a.fc-event:hover {
+    box-shadow: none;
+}
+
+.rhc-timetable .fc-event-inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rhc-timetable .fullCalendar a.fc-event .fc-event-inner > div {
+    line-height: 20px;
+    margin: 5px auto;
+    width: 100%;
+    flex: 0 1 auto;
+}
+
+.rhc-timetable .fullCalendar a.fc-event .fc-event-inner .fc-event-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 2px auto 0;
+}
+
+.rhc-timetable .fullCalendar a.fc-event .fc-event-inner .fc-event-time {
+    font-size: 16px;
+    font-weight: normal;
+	margin: 5px auto;
+}
+
+.rhc-timetable .fullCalendar a.fc-event .fc-event-inner .fc-event-time + .fc-event-time {
+    margin: -8px auto 10px;
+}
+
+.rhc-timetable .fc-event-vert .fc-event-bg {
+    background: transparent;
+}
+
+@media screen and (max-width:480px) {
+	.rhc-timetable .fc-agenda-slots tbody tr .fc-widget-content, .rhc-timetable .fc-widget-content {
+		height:auto;
+	}
+	
+    .rhc-timetable .fc-header .fc-header-left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .rhc-timetable .fc-header .fc-header-left .fc-button.fc-button-prevYear,
+    .rhc-timetable .fc-header .fc-header-left .fc-button.fc-button-prev,
+    .rhc-timetable .fc-header .fc-header-left .fc-button.fc-button-next,
+    .rhc-timetable .fc-header .fc-header-left .fc-button.fc-button-nextYear {
+        flex:1 1 auto;
+		border-radius:0;
+    }
+
+    .rhc-timetable .fc-header .fc-button-prev:before,
+    .rhc-timetable .fc-header .fc-button-next:before,
+    .rhc-timetable .fc-header .fc-button-prevYear:before,
+    .rhc-timetable .fc-header .fc-button-nextYear:before {
+        transform: translateX(-50%);
+        left: 50%;
+        text-indent: initial;
+    }
+
+    .fc-header .fc-header-left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .fc-header .fc-header-left .fc-button.fc-button-prevYear,
+    .fc-header .fc-header-left .fc-button.fc-button-prev,
+    .fc-header .fc-header-left .fc-button.fc-button-next,
+    .fc-header .fc-header-left .fc-button.fc-button-nextYear {
+        flex:1 1 auto;
+    }
+
+    .fc-header .fc-button-prev:before,
+    .fc-header .fc-button-next:before,
+    .fc-header .fc-button-prevYear:before,
+    .fc-header .fc-button-nextYear:before {
+        transform: translateX(-50%);
+        left: 50%;
+        text-indent: initial;
+    }
+	
+	.rhcalendar.rhc-timetable  .fullCalendar .btn-group .btn.dropdown-toggle.clearfix.btn-small.btn-taxfilter {
+    	padding: 14px 40px 13px 12px;
+    	border-radius: 0px;
+    }
+
+    .rhcalendar.rhc-timetable .rh-flat-ui .select .btn .filter-option {
+    	line-height: 1;
+    	top: 18px;
+    }
+	
+	 .fc-small.rhc-timetable .fullCalendar .fc-day-number {
+    	font-size: 20px;
+		font-weight: 300;
+    	text-align: center;
+    }
+}
